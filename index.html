@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James | Personal Portfolio</title>
+    <meta name="description" content="Personal portfolio showcasing projects and skills.">
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- BoxIcons for Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="logo">J<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-icon" id="menu-icon">
+            <i class='bx bx-menu'></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2 class="subtitle">Hello, I'm</h2>
+            <h1 class="title glow-text">James</h1>
+            <p class="description">
+                A passionate developer building sleek, functional, and modern digital experiences.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary-btn">View My Work</a>
+                <a href="#contact" class="btn secondary-btn">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">About <span class="neon-text">Me</span></h2>
+        <div class="about-container glass-panel">
+            <p>
+                I am a driven software developer with a focus on crafting high-quality applications. 
+                My expertise spans across hardware and software integration, IoT solutions, and mobile/web development.
+                I thrive on turning complex problems into elegant and intuitive solutions.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-badge">ASP.NET MVC</span>
+                <span class="tech-badge">Java</span>
+                <span class="tech-badge">C Language</span>
+                <span class="tech-badge">HTML</span>
+                <span class="tech-badge">CSS</span>
+                <span class="tech-badge">MySQL</span>
+                <span class="tech-badge">C#</span>
+                <span class="tech-badge">Kotlin</span>
+                <span class="tech-badge">Flutter</span>
+                <span class="tech-badge">PHP</span>
+                <span class="tech-badge">Laravel</span>
+            </div>
+            <div class="about-action">
+                <a href="assets/resume.pdf" class="btn primary-btn" target="_blank" rel="noopener noreferrer">
+                    <i class='bx bx-download'></i> Download CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">My <span class="neon-text">Projects</span></h2>
+        <div class="projects-marquee">
+            <div class="projects-grid" id="projects-grid">
+                <!-- P.I.M.S. -->
+                <div class="project-card glass-panel">
+                    <img src="assets/pims_dashboard.png" alt="P.I.M.S. Dashboard" class="project-img">
+                    <div class="project-info">
+                        <h3>P.I.M.S.</h3>
+                        <p>A scalable, multi-tenant web application to streamline asset tracking with full CRUD operations and automated transaction logs.</p>
+                        <a href="https://github.com/ZarkerZ/P.I.M.S" target="_blank" class="project-link">View on GitHub <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </div>
+                <!-- AguaCommunitas -->
+                <div class="project-card glass-panel">
+                    <img src="assets/aguacommunitas.png" alt="AguaCommunitas" class="project-img">
+                    <div class="project-info">
+                        <h3>AguaCommunitas</h3>
+                        <p>IoT system integrating hardware sensors and a Flutter/Dart dashboard to monitor and manage resources efficiently.</p>
+                        <a href="https://github.com/ZarkerZ/AguaCommunitas" target="_blank" class="project-link">View on GitHub <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </div>
+                <!-- BattleArt -->
+                <div class="project-card glass-panel">
+                    <img src="assets/battleart.png" alt="BattleArt" class="project-img">
+                    <div class="project-info">
+                        <h3>BattleArt</h3>
+                        <p>(Details coming soon...)</p>
+                        <a href="https://github.com/ZarkerZ/BattleArt-Laravel" target="_blank" class="project-link">View on GitHub <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </div>
+                <!-- HeatAlert -->
+                <div class="project-card glass-panel">
+                    <img src="assets/heatalert.jpg" alt="HeatAlert" class="project-img">
+                    <div class="project-info">
+                        <h3>HeatAlert</h3>
+                        <p>(Details coming soon...)</p>
+                        <a href="https://github.com/ZarkerZ/heatalert-portfolio" target="_blank" class="project-link">View on GitHub <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get In <span class="neon-text">Touch</span></h2>
+        <div class="contact-container">
+            <div class="contact-links">
+                <a href="#" class="social-link glass-panel" aria-label="GitHub">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="#" class="social-link glass-panel" aria-label="LinkedIn">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="#" class="social-link glass-panel" aria-label="Email">
+                    <i class='bx bx-envelope'></i>
+                </a>
+                <a href="#" class="social-link glass-panel" aria-label="Resume">
+                    <i class='bx bx-file'></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 James. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
