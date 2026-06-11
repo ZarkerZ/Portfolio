@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Premium Features Base -->
+    <div class="background-orb"></div>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <a href="#home" class="logo">J<span>.</span></a>
@@ -29,13 +31,11 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero reveal">
         <div class="hero-content">
-            <h2 class="subtitle">Hello, I'm</h2>
-            <h1 class="title glow-text">James</h1>
-            <p class="description">
-                A passionate developer building sleek, functional, and modern digital experiences.
-            </p>
+            <h2 class="subtitle reveal-delay-1">Hello, I'm</h2>
+            <h1 class="title glow-text reveal-delay-2">James</h1>
+            <p class="description typing-text reveal-delay-3" data-text="A passionate developer building sleek, functional, and modern digital experiences."></p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn primary-btn">View My Work</a>
                 <a href="#contact" class="btn secondary-btn">Contact Me</a>
@@ -44,9 +44,9 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <h2 class="section-title">About <span class="neon-text">Me</span></h2>
-        <div class="about-container glass-panel">
+    <section id="about" class="about reveal">
+        <h2 class="section-title reveal-delay-1">About <span class="neon-text">Me</span></h2>
+        <div class="about-container glass-panel reveal-delay-2">
             <p>
                 I am a driven software developer with a focus on crafting high-quality applications. 
                 My expertise spans across hardware and software integration, IoT solutions, and mobile/web development.
@@ -66,7 +66,7 @@
                 <span class="tech-badge">Laravel</span>
             </div>
             <div class="about-action">
-                <a href="assets/resume.pdf" class="btn primary-btn" target="_blank" rel="noopener noreferrer">
+                <a href="assets/James_Canete_Resume.pdf" class="btn primary-btn" target="_blank" rel="noopener noreferrer">
                     <i class='bx bx-download'></i> Download CV
                 </a>
             </div>
@@ -76,8 +76,10 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <h2 class="section-title">My <span class="neon-text">Projects</span></h2>
-        <div class="projects-marquee">
-            <div class="projects-grid" id="projects-grid">
+        <div class="projects-carousel-container">
+            <button class="carousel-arrow left-arrow" id="prev-project" aria-label="Previous Project"><i class='bx bx-chevron-left'></i></button>
+            <div class="projects-marquee">
+                <div class="projects-grid" id="projects-grid">
                 <!-- P.I.M.S. -->
                 <div class="project-card glass-panel">
                     <img src="assets/pims_dashboard.png" alt="P.I.M.S. Dashboard" class="project-img">
@@ -101,7 +103,7 @@
                     <img src="assets/battleart.png" alt="BattleArt" class="project-img">
                     <div class="project-info">
                         <h3>BattleArt</h3>
-                        <p>(Details coming soon...)</p>
+                        <p>BattleArt is a PHP-based online platform where artists can showcase original work and invite others to reinterpret it, fostering community connection, growth, and creative inspiration through side-by-side artistic challenges.</p>
                         <a href="https://github.com/ZarkerZ/BattleArt-Laravel" target="_blank" class="project-link">View on GitHub <i class='bx bx-right-arrow-alt'></i></a>
                     </div>
                 </div>
@@ -110,30 +112,29 @@
                     <img src="assets/heatalert.jpg" alt="HeatAlert" class="project-img">
                     <div class="project-info">
                         <h3>HeatAlert</h3>
-                        <p>(Details coming soon...)</p>
+                        <p>HeatAlert is an IoT-enabled fire safety system that uses an ESP32 and real-time sensors to stream smoke, flame, and temperature data to Firebase, delivering instant push alerts and live tracking via an Android app to protect homes.</p>
                         <a href="https://github.com/ZarkerZ/heatalert-portfolio" target="_blank" class="project-link">View on GitHub <i class='bx bx-right-arrow-alt'></i></a>
                     </div>
                 </div>
             </div>
         </div>
+            <button class="carousel-arrow right-arrow" id="next-project" aria-label="Next Project"><i class='bx bx-chevron-right'></i></button>
+        </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2 class="section-title">Get In <span class="neon-text">Touch</span></h2>
+    <section id="contact" class="contact reveal">
+        <h2 class="section-title reveal-delay-1">Get In <span class="neon-text">Touch</span></h2>
         <div class="contact-container">
             <div class="contact-links">
-                <a href="#" class="social-link glass-panel" aria-label="GitHub">
+                <a href="https://github.com/ZarkerZ" class="social-link glass-panel" aria-label="GitHub">
                     <i class='bx bxl-github'></i>
                 </a>
-                <a href="#" class="social-link glass-panel" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/james-ian-ca%C3%B1ete-b11460355/" class="social-link glass-panel" aria-label="LinkedIn">
                     <i class='bx bxl-linkedin'></i>
                 </a>
-                <a href="#" class="social-link glass-panel" aria-label="Email">
+                <a href="mailto:jamesiancanete1002@gmail.com" class="social-link glass-panel" aria-label="Email">
                     <i class='bx bx-envelope'></i>
-                </a>
-                <a href="#" class="social-link glass-panel" aria-label="Resume">
-                    <i class='bx bx-file'></i>
                 </a>
             </div>
         </div>
@@ -143,6 +144,24 @@
     <footer>
         <p>&copy; 2026 James. All rights reserved.</p>
     </footer>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="project-modal">
+        <div class="modal-content glass-panel">
+            <span class="close-modal"><i class='bx bx-x'></i></span>
+            <div class="modal-body">
+                <img src="" alt="Project Image" class="modal-img" id="modal-img">
+                <div class="modal-info">
+                    <h3 id="modal-title">Project Title</h3>
+                    <div class="modal-tech-stack" id="modal-tech-stack"></div>
+                    <p id="modal-desc">Project Description</p>
+                    <div class="modal-links">
+                        <a href="#" target="_blank" class="btn primary-btn" id="modal-github"><i class='bx bxl-github'></i> View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
