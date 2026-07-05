@@ -1,5 +1,3 @@
-import { Analytics } from "@vercel/analytics/next"
-
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const menuIcon = document.getElementById('menu-icon');
