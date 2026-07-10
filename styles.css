@@ -380,6 +380,18 @@ section {
     flex-grow: 1;
 }
 
+.project-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-tech-stack .tech-badge {
+    padding: 6px 10px;
+    font-size: 0.78rem;
+}
+
 .project-link {
     display: inline-flex;
     align-items: center;
